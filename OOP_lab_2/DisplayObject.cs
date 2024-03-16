@@ -18,6 +18,7 @@ namespace OOP_lab_1
         protected readonly Color _borderColor;
         protected readonly int _borderSize;
         public abstract void Draw(Graphics g);
+        protected abstract void MoveOn(int dX, int dY);
         protected DisplayObject(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize)
         {
             _X1 = x1;
@@ -29,6 +30,25 @@ namespace OOP_lab_1
             _fillColor = fillColor;
             _borderColor = borderColor;
             _borderSize = borderSize;
+        }
+
+        public void Move()
+        {
+            if (_aX == 0 && _aY == 0)
+            {
+                MoveOn(_vX, _vY);
+            }
+            else
+            {
+                MoveOn(_vX + _aX/2, _vY + _aY/2);
+                _vX += _aX;
+                _vY += _aY;
+            }
+        }
+        public bool Intersects(DrawField obj)
+        {
+            var cords = obj.GetCords();
+            return !(_X1 >= cords.Item1 && _X1 <= cords.Item3 && _Y1 >= cords.Item2 && _Y1 <= cords.Item4);
         }
     }
 }

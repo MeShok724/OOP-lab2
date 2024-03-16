@@ -6,8 +6,8 @@ namespace OOP_lab_1
 {
     public class DrawField : DisplayObject
     {
-        private readonly int _X2;
-        private readonly int _Y2;
+        private int _X2;
+        private int _Y2;
         public override void Draw(Graphics g)
         {
             using (var brush = new SolidBrush(_fillColor))
@@ -15,7 +15,8 @@ namespace OOP_lab_1
                 using (var pen = new Pen(_borderColor, _borderSize))
                 {
                     g.FillRectangle(brush, _X1, _Y1, _X2 - _X1, _Y2 - _Y1);
-                    g.DrawRectangle(pen, _X1, _Y1, _X2 - _X1, _Y2 - _Y1);
+                    if (_borderSize != 0)
+                        g.DrawRectangle(pen, _X1, _Y1, _X2 - _X1, _Y2 - _Y1);
                 }
             }
         }
@@ -28,5 +29,11 @@ namespace OOP_lab_1
             _rectX2 = _X2 + borderSize / 2;
             _rectY2 = _Y2 + borderSize / 2;
         }
+        public (int, int, int, int) GetCords()
+        {
+            return (_X1, _Y1, _X2, _Y2);
+        }
+
+        protected override void MoveOn(int dX, int dY) { }
     }
 }

@@ -4,8 +4,8 @@ namespace OOP_lab_1
 {
     public class Rectangle : DisplayObject
     {
-        private readonly int _X2;
-        private readonly int _Y2;
+        private int _X2;
+        private int _Y2;
         override public void Draw(Graphics g)
         {
             using (var pen = new Pen(_borderColor, _borderSize))
@@ -26,6 +26,14 @@ namespace OOP_lab_1
             _rectY1 = _Y1 - borderSize / 2;
             _rectX2 = _X2 + borderSize / 2;
             _rectY2 = _Y2 + borderSize / 2;
+        }
+
+        protected override void MoveOn(int dX, int dY)
+        {
+            _X1 += dX;
+            _X2 += dX;
+            _Y1 += dY;
+            _Y2 += dY;
         }
     }
 }

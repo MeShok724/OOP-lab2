@@ -5,8 +5,8 @@ namespace OOP_lab_1
 {
     public class Section : DisplayObject
     {
-        private readonly int _X2;
-        private readonly int _Y2;
+        private int _X2;
+        private int _Y2;
         private int _diffX;
         private int _diffY;
         private readonly int _width;
@@ -53,6 +53,13 @@ namespace OOP_lab_1
             _rectY2 = Math.Max(_Y1, _Y2) + borderSize / 2;
             _width = width;
             FindDiff();
+        }
+        protected override void MoveOn(int dX, int dY)
+        {
+            _X1 += dX;
+            _X2 += dX;
+            _Y1 += dY;
+            _Y2 += dY;
         }
     }
 }

@@ -5,10 +5,10 @@ namespace OOP_lab_1
 {
     public class Triangle : DisplayObject
     {
-        private readonly int _X2;
-        private readonly int _Y2;
-        private readonly int _X3;
-        private readonly int _Y3;
+        private int _X2;
+        private int _Y2;
+        private int _X3;
+        private int _Y3;
         
         override public void Draw(Graphics g)
         {
@@ -38,6 +38,15 @@ namespace OOP_lab_1
             _rectY1 = minY - borderSize / 2;
             _rectX2 = maxX + borderSize / 2;
             _rectY2 = maxY + borderSize / 2;
+        }
+        protected override void MoveOn(int dX, int dY)
+        {
+            _X1 += dX;
+            _X2 += dX;
+            _X3 += dX;
+            _Y1 += dY;
+            _Y2 += dY;
+            _Y3 += dY;
         }
     }
 }

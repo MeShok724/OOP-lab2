@@ -19,14 +19,6 @@ namespace OOP_lab_1
             Application.SetCompatibleTextRenderingDefault(false);
             FormMain mainForm = new FormMain();
             Application.Run(mainForm);
-            // Panel panel2 = new Panel();
-            // panel2.Width = 1500;
-            // panel2.Height = 700;
-            // panel2.Location = new Point(0, 0);
-            // mainForm.Controls.Add(panel2);
-            // mainForm.g = mainForm.panel2.CreateGraphics();
-            // mainForm.DrawObjects();
-            
         }
     }
 }

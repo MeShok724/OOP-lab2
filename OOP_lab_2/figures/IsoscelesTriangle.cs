@@ -4,10 +4,10 @@ namespace OOP_lab_1
 {
     public class IsoscelesTriangle : DisplayObject
     {
-        private readonly int _X2;
-        private readonly int _Y2;
-        private readonly int _X3;
-        private readonly int _Y3;
+        private int _X2;
+        private int _Y2;
+        private int _X3;
+        private int _Y3;
         override public void Draw(Graphics g)
         {
             using (var pen = new Pen(_borderColor, _borderSize))
@@ -30,6 +30,15 @@ namespace OOP_lab_1
             _X3 = _X1 + width / 2;
             _Y2 = _Y1 + height;
             _Y3 = _Y2;
+        }
+        protected override void MoveOn(int dX, int dY)
+        {
+            _X1 += dX;
+            _X2 += dX;
+            _X3 += dX;
+            _Y1 += dY;
+            _Y2 += dY;
+            _Y3 += dY;
         }
     }
 }
