@@ -19,7 +19,7 @@ namespace OOP_lab_1
                 }
             }
         }
-        public DrawField(int X1, int Y1, Color fillColor, Color borderColor, int borderSize, int width, int heigth) : base(X1, Y1, fillColor, borderColor, borderSize)
+        public DrawField(int X1, int Y1, Color fillColor, Color borderColor, int borderSize, int width, int heigth) : base(X1, Y1, 0, 0, 0, 0, fillColor, borderColor, borderSize)
         {
             _X2 = X1 + width;
             _Y2 = Y1 + heigth;

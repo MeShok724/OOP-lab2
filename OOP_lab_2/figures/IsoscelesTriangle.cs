@@ -20,7 +20,7 @@ namespace OOP_lab_1
             }
         }
         
-        public IsoscelesTriangle(int x1, int y1, Color fillColor, Color borderColor, int borderSize, int width, int height) : base(x1, y1, fillColor, borderColor, borderSize)
+        public IsoscelesTriangle(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int width, int height) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _rectX1 = _X1 - width / 2 - borderSize / 2;
             _rectY1 = _Y1 - borderSize / 2;

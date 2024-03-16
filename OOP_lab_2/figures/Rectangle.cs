@@ -18,7 +18,7 @@ namespace OOP_lab_1
             }
         }
         
-        public Rectangle(int x1, int y1, Color fillColor, Color borderColor, int borderSize, int width, int height) : base(x1, y1, fillColor, borderColor, borderSize)
+        public Rectangle(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int width, int height) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _X2 = _X1 + width;
             _Y2 = _Y1 + height;

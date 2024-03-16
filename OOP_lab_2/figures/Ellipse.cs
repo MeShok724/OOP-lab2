@@ -18,7 +18,7 @@ namespace OOP_lab_1
             }
         }
         
-        public Ellipse(int x1, int y1, Color fillColor, Color borderColor, int borderSize, int rx, int ry) : base(x1, y1, fillColor, borderColor, borderSize)
+        public Ellipse(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int rx, int ry) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _X2 = x1 + 2 * rx;
             _Y2 = y1 + 2 * ry;

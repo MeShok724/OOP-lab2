@@ -22,7 +22,7 @@ namespace OOP_lab_1
             }
         }
         
-        public Triangle(int x1, int y1, Color fillColor, Color borderColor, int borderSize, int x2, int y2, int x3, int y3) : base(x1, y1, fillColor, borderColor, borderSize)
+        public Triangle(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int x2, int y2, int x3, int y3) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _X2 = x2;
             _Y2 = y2;

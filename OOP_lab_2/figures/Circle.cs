@@ -18,7 +18,7 @@ namespace OOP_lab_1
             }
         }
         
-        public Circle(int x1, int y1, Color fillColor, Color borderColor, int borderSize, int radius) : base(x1, y1, fillColor, borderColor, borderSize)
+        public Circle(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int radius) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _X2 = x1 + 2 * radius;
             _Y2 = y1 + 2 * radius;

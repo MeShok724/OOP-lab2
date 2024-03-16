@@ -21,7 +21,7 @@ namespace OOP_lab_1
             }
         }
         
-        public EquilateralTriangle(int x1, int y1, Color fillColor, Color borderColor, int borderSize, int side) : base(x1, y1, fillColor, borderColor, borderSize)
+        public EquilateralTriangle(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int side) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         { 
             int height = (int)Math.Round(side * Math.Sqrt(3) / 2);
             _rectX1 = _X1 - side / 2 - borderSize / 2;
