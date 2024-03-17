@@ -6,7 +6,6 @@ namespace OOP_lab_1
 {
     public partial class FormMain : Form
     {
-        public Graphics g;
         public Game game;
         
         public FormMain()
@@ -19,9 +18,7 @@ namespace OOP_lab_1
         {
             if (game == null)
             {
-                g = pbDrawField.CreateGraphics();
-                g.Clear(Color.White);
-                game = new Game(g, pbDrawField.Width, pbDrawField.Height);   
+                game = new Game(pbDrawField, pbDrawField.Width, pbDrawField.Height);   
             }
         }
     }
