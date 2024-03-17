@@ -4,8 +4,6 @@ namespace OOP_lab_1
 {
     public class Square : DisplayObject
     {
-        private int _X2;
-        private int _Y2;
         override public void Draw(Graphics g)
         {
             using (var pen = new Pen(_borderColor, _borderSize*2))
@@ -18,7 +16,7 @@ namespace OOP_lab_1
             }
         }
         
-        public Square(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int side) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
+        public Square(int x1, int y1, int side, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _X2 = _X1 + side;
             _Y2 = _Y1 + side;

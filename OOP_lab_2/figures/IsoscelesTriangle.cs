@@ -4,8 +4,6 @@ namespace OOP_lab_1
 {
     public class IsoscelesTriangle : DisplayObject
     {
-        private int _X2;
-        private int _Y2;
         private int _X3;
         private int _Y3;
         override public void Draw(Graphics g)
@@ -20,7 +18,7 @@ namespace OOP_lab_1
             }
         }
         
-        public IsoscelesTriangle(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int width, int height) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
+        public IsoscelesTriangle(int x1, int y1, int width, int height, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _rectX1 = _X1 - width / 2 - borderSize / 2;
             _rectY1 = _Y1 - borderSize / 2;

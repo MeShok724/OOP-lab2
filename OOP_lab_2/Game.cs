@@ -22,8 +22,8 @@ namespace OOP_lab_1
             _graphics = graphics;
             _fieldX2 = maxX;
             _fieldY2 = maxY;
-            _field = new DrawField(0, 0, Color.White, Color.White, 0, maxX, maxY);
-            Rectangle rect1 = new Rectangle(100, 100, 5, 5, 0, 5, Color.Red, Color.Black, 2, 50, 50);
+            _field = new DrawField(0, 0, maxX, maxY, Color.White, Color.White, 0);
+            Rectangle rect1 = new Rectangle(100, 100, 50, 50, 5, 5, 0, 5, Color.Red, Color.Black, 2);
 
             _objects.Add(_field);
             _objects.Add(rect1);
@@ -79,7 +79,7 @@ namespace OOP_lab_1
             int vY = rand.Next(-5, 5);
             int aX = rand.Next(-5, 5);
             int aY = rand.Next(-5, 5);
-            return new Rectangle(x, y, vX, vY, aX, aY, Color.Red, Color.Black, 2, 50, 50);
+            return new Rectangle(x, y, 50, 50, vX, vY, aX, aY, Color.Red, Color.Black, 2);
         }
     }
 }

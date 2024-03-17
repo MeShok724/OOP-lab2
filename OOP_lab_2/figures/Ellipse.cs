@@ -4,8 +4,6 @@ namespace OOP_lab_1
 {
     public class Ellipse : DisplayObject
     {
-        private int _X2;
-        private int _Y2;
         override public void Draw(Graphics g)
         {
             using (var pen = new Pen(_borderColor, _borderSize))
@@ -18,7 +16,7 @@ namespace OOP_lab_1
             }
         }
         
-        public Ellipse(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int rx, int ry) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
+        public Ellipse(int x1, int y1, int rx, int ry, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _X2 = x1 + 2 * rx;
             _Y2 = y1 + 2 * ry;

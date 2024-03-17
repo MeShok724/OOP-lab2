@@ -6,6 +6,8 @@ namespace OOP_lab_1
     {
         protected int _X1;
         protected int _Y1;
+        protected int _X2;
+        protected int _Y2;
         protected int _vX;
         protected int _vY;
         protected int _aX;
@@ -34,16 +36,13 @@ namespace OOP_lab_1
 
         public void Move()
         {
-            if (_aX == 0 && _aY == 0)
-            {
-                MoveOn(_vX, _vY);
-            }
-            else
-            {
-                MoveOn(_vX + _aX/2, _vY + _aY/2);
-                _vX += _aX;
-                _vY += _aY;
-            }
+            MoveOn(_vX + _aX/2, _vY + _aY/2);
+            _rectX1 += _vX + _aX/2;
+            _rectX2 += _vX + _aX/2;
+            _rectY1 += _vY + _aY/2;
+            _rectY2 += _vY + _aY/2;
+            _vX += _aX;
+            _vY += _aY;
         }
         public bool Intersects(DrawField obj)
         {

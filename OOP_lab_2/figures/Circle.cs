@@ -4,8 +4,6 @@ namespace OOP_lab_1
 {
     public class Circle : DisplayObject
     {
-        private int _X2;
-        private int _Y2;
         public override void Draw(Graphics g)
         {
             using (var pen = new Pen(_borderColor, _borderSize))
@@ -18,7 +16,7 @@ namespace OOP_lab_1
             }
         }
         
-        public Circle(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int radius) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
+        public Circle(int x1, int y1, int radius, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _X2 = x1 + 2 * radius;
             _Y2 = y1 + 2 * radius;

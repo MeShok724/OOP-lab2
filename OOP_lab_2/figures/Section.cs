@@ -5,8 +5,6 @@ namespace OOP_lab_1
 {
     public class Section : DisplayObject
     {
-        private int _X2;
-        private int _Y2;
         private int _diffX;
         private int _diffY;
         private readonly int _width;
@@ -43,7 +41,7 @@ namespace OOP_lab_1
             }
         }
         
-        public Section(int x1, int y1, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize, int x2, int y2, int width) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
+        public Section(int x1, int y1, int x2, int y2, int width, int vX, int vY, int aX, int aY, Color fillColor, Color borderColor, int borderSize) : base(x1, y1, vX, vY, aX, aY, fillColor, borderColor, borderSize)
         {
             _X2 = x2;
             _Y2 = y2;

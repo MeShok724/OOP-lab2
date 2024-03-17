@@ -6,8 +6,6 @@ namespace OOP_lab_1
 {
     public class DrawField : DisplayObject
     {
-        private int _X2;
-        private int _Y2;
         public override void Draw(Graphics g)
         {
             using (var brush = new SolidBrush(_fillColor))
@@ -20,7 +18,7 @@ namespace OOP_lab_1
                 }
             }
         }
-        public DrawField(int X1, int Y1, Color fillColor, Color borderColor, int borderSize, int width, int heigth) : base(X1, Y1, 0, 0, 0, 0, fillColor, borderColor, borderSize)
+        public DrawField(int X1, int Y1, int width, int heigth, Color fillColor, Color borderColor, int borderSize) : base(X1, Y1, 0, 0, 0, 0, fillColor, borderColor, borderSize)
         {
             _X2 = X1 + width;
             _Y2 = Y1 + heigth;
